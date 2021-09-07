@@ -1,5 +1,5 @@
 # Made by JackAttack612
-# Version 3.4.3
+# Version 4.3.4
 # To check if you have the latest version visit https://github.com/JackAttack612/Calculator
 
 import time
@@ -11,9 +11,6 @@ def admin_panel():
         print("Okay, nuking")
         time.sleep(3)
         quit()
-    elif name == 'audrey':
-        print("ur cute")
-        calculator()
     else:
         print("Cool don't care")
         print("You wasted your time getting here it does nothing")
@@ -36,7 +33,7 @@ def quit1():
     quit()
 
 print("Loading Calculator")
-print("Version 3.4.3")
+print("Version 4.3.4")
 print("To see latest version visit https://github.com/JackAttack612/Calculator")
 time.sleep(5)
 print("\nOperations/Info:")
