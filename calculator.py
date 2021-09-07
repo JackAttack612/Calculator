@@ -1,4 +1,24 @@
+# Made by JackAttack612
+# Version 3.4.2
+# To check if you have the latest version visit https://github.com/JackAttack612/Calculator
+
 import time
+import tkinter
+
+def admin_panel():
+    name = input("What is your name:").lower()
+    if name == 'nuke':
+        print("Okay, nuking")
+        time.sleep(3)
+        quit()
+    elif name == 'audrey':
+        print("ur cute")
+        calculator()
+    else:
+        print("Cool don't care")
+        print("You wasted your time getting here it does nothing")
+        calculator()
+
 
 def quit1():
     print("closing in 5 seconds")
@@ -23,6 +43,8 @@ print("* = multiply")
 print("** = exponent")
 print("// = floor division")
 print("% = modulus")
+print("< = less than")
+print("> = greater than")
 print("This calculator uses order of operation")
 print("To get the list of Operators later type \"Operations\" ")
 print("_______________________")
@@ -48,9 +70,17 @@ def calculator():
             print("** = exponent")
             print("// = floor division")
             print("% = modulus")
+            print("< = less than")
+            print("> = greater than")
             print("_______________________")
-            time.sleep(3)
             calculator()
+        elif calc == 'admin':
+            admin1 = input("\nEnter Password:")
+            if admin1 == 'MadJack612!':
+                admin_panel()
+            else:
+                print("Password Incorrect")
+                calculator()
         else:
             print("Answer: " + str(eval(calc)))
             calculator()
@@ -86,7 +116,7 @@ def calculator():
         calculator()
     except SyntaxError:
         print("\n!!!")
-        print("Error: Could not complete calculation.\nMost likely due to an invalid operation; Refer to the top of the page to see all valid operations.")
+        print("Error: Could not complete calculation.\nMost likely due to an invalid operation; Refer to the top of the page to see all valid operations\nor type \"Operations\"")
         print("Error type: SyntaxError")
         print("!!!")
         time.sleep(3)
