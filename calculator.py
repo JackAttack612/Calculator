@@ -1,5 +1,5 @@
 # Made by JackAttack612
-# Version 3.4.2
+# Version 3.4.3
 # To check if you have the latest version visit https://github.com/JackAttack612/Calculator
 
 import time
@@ -35,7 +35,11 @@ def quit1():
     time.sleep(1)
     quit()
 
-print("Operations/Info:")
+print("Loading Calculator")
+print("Version 3.4.3")
+print("To see latest version visit https://github.com/JackAttack612/Calculator")
+time.sleep(5)
+print("\nOperations/Info:")
 print("+ = addition")
 print("- = subtracion")
 print("/ = division")
