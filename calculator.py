@@ -38,7 +38,7 @@ def admin_panel():
         calculator()
 
 def audrey():
-    audreyq = input("Are you audrey? DONT LIE (Yes or No): ").lower()
+    audreyq = input("\nAre you audrey? DONT LIE (Yes or No): ").lower()
     if audreyq == 'yes':
         password = input("Enter your password: ")
         if password == 'Crossfield25':
@@ -46,11 +46,11 @@ def audrey():
             if escape == 'quit':
                 quit()
             else:
-                print("Playing loverboy by A-Wall")
-                playsound(r'C:\Users\jetfl\Downloads\Calculator-Beta-main\Audio\audrey.mp3')
+                print("\nPlaying loverboy by A-Wall")
+                playsound(r'C:\Users\jetfl\Coding\Calculator-main\Audio\audrey.mp3')
                 calculator()
         else:
-            print("Incorrect Password")
+            print("\nIncorrect Password")
             time.sleep(2)
             calculator()
     elif audreyq == 'no':
