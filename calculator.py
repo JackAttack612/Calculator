@@ -1,39 +1,13 @@
 # Made by JackAttack612
-# Version 4.3.4
+# Version 4.3.5
 # To check if you have the latest version visit https://github.com/JackAttack612/Calculator
 
 import time
 import tkinter
-
-def admin_panel():
-    name = input("What is your name:").lower()
-    if name == 'nuke':
-        print("Okay, nuking")
-        time.sleep(3)
-        quit()
-    else:
-        print("Cool don't care")
-        print("You wasted your time getting here it does nothing")
-        calculator()
-
-
-def quit1():
-    print("closing in 5 seconds")
-    time.sleep(1)
-    print("closing in 4 seconds")
-    time.sleep(1)
-    print("closing in 3 seconds")
-    time.sleep(1)
-    print("closing in 2 seconds")
-    time.sleep(1)
-    print("closing in 1 second")
-    time.sleep(1)
-    print("closing")
-    time.sleep(1)
-    quit()
+from playsound import playsound
 
 print("Loading Calculator")
-print("Version 4.3.4")
+print("Version 4.3.5")
 print("To see latest version visit https://github.com/JackAttack612/Calculator")
 time.sleep(5)
 print("\nOperations/Info:")
@@ -49,6 +23,55 @@ print("> = greater than")
 print("This calculator uses order of operation")
 print("To get the list of Operators later type \"Operations\" ")
 print("_______________________")
+
+def admin_panel():
+    name = input("What is your name:").lower()
+    if name == 'nuke':
+        print("Okay, nuking")
+        time.sleep(3)
+        quit()
+    elif name == 'audrey':
+        audrey()
+    else:
+        print("Cool don't care")
+        print("You wasted your time getting here it does nothing")
+        calculator()
+
+def audrey():
+    audreyq = input("Are you audrey? DONT LIE (Yes or No): ").lower()
+    if audreyq == 'yes':
+        password = input("Enter your password: ")
+        if password == 'Crossfield25':
+            escape = input("click enter to play a song or type quit to exit: ").lower()
+            if escape == 'quit':
+                quit()
+            else:
+                print("Playing loverboy by A-Wall")
+                playsound(r'C:\Users\jetfl\Downloads\Calculator-Beta-main\Audio\audrey.mp3')
+                calculator()
+        else:
+            print("Incorrect Password")
+            time.sleep(2)
+            calculator()
+    elif audreyq == 'no':
+        print("Well then why are you here???")
+        time.sleep(3)
+        calculator()
+
+def quit1():
+    print("closing in 5 seconds")
+    time.sleep(1)
+    print("closing in 4 seconds")
+    time.sleep(1)
+    print("closing in 3 seconds")
+    time.sleep(1)
+    print("closing in 2 seconds")
+    time.sleep(1)
+    print("closing in 1 second")
+    time.sleep(1)
+    print("closing")
+    time.sleep(1)
+    quit()
 
 def calculator():
     try:
@@ -82,10 +105,11 @@ def calculator():
             else:
                 print("Password Incorrect")
                 calculator()
+        elif calc == "audrey":
+                audrey()
         else:
             print("Answer: " + str(eval(calc)))
             calculator()
-
 
     except ZeroDivisionError:
         print("\n!!!")
