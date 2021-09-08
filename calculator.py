@@ -6,9 +6,9 @@ import time
 import tkinter
 from playsound import playsound
 
-print("Loading Calculator")
 print("Version 4.3.5")
 print("To see latest version visit https://github.com/JackAttack612/Calculator")
+print("Loading Calculator...")
 time.sleep(5)
 print("\nOperations/Info:")
 print("+ = addition")
@@ -28,7 +28,7 @@ def admin_panel():
     name = input("What is your name:").lower()
     if name == 'nuke':
         print("Okay, nuking")
-        time.sleep(3)
+        playsound(r'C:\Users\jetfl\Coding\Calculator-main\Audio\nuke.mp3')
         quit()
     elif name == 'audrey':
         audrey()
@@ -44,7 +44,7 @@ def audrey():
         if password == 'Crossfield25':
             escape = input("click enter to play a song or type quit to exit: ").lower()
             if escape == 'quit':
-                quit()
+                calculator()
             else:
                 print("\nPlaying loverboy by A-Wall")
                 playsound(r'C:\Users\jetfl\Coding\Calculator-main\Audio\audrey.mp3')
@@ -56,6 +56,9 @@ def audrey():
     elif audreyq == 'no':
         print("Well then why are you here???")
         time.sleep(3)
+        calculator()
+    else:
+        print("You didn't say yes or no.")
         calculator()
 
 def quit1():
@@ -100,7 +103,7 @@ def calculator():
             calculator()
         elif calc == 'admin':
             admin1 = input("\nEnter Password:")
-            if admin1 == 'MadJack612!':
+            if admin1 == 'Madjack612!':
                 admin_panel()
             else:
                 print("Password Incorrect")
