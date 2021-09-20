@@ -1,5 +1,9 @@
 # Version
-V3.2
+V4.4
+
+# HOW TO USE!!!!!
+Download zip file from releases (if you download from main branch it might have bugs)
+Open zip and drag or extract the calculator-xxx folder to your downloads folder
 
 # Change Log
 v.3.2

@@ -1,34 +1,31 @@
 # Made by JackAttack612
-# Version 4.3.5
+# Version 4.4
 # To check if you have the latest version visit https://github.com/JackAttack612/Calculator
 
 import time
 import tkinter
+import os
 from playsound import playsound
+import multiprocessing
 
-print("Version 4.3.5")
-print("To see latest version visit https://github.com/JackAttack612/Calculator")
-print("Loading Calculator...")
-time.sleep(5)
-print("\nOperations/Info:")
-print("+ = addition")
-print("- = subtracion")
-print("/ = division")
-print("* = multiply")
-print("** = exponent")
-print("// = floor division")
-print("% = modulus")
-print("< = less than")
-print("> = greater than")
-print("This calculator uses order of operation")
-print("To get the list of Operators later type \"Operations\" ")
-print("_______________________")
+# Eastereggs -------
+
+def audrey():
+    print('\nAvailable songs:\nloverboy\nbored')
+    time.sleep(3)
+    music = input("What song do you want to play (Title Only): ").lower()
+    if music == 'quit':
+        calculator()
+    elif music == 'loverboy' or 'bored':
+        print("\nPlaying " + music)
+        playsound(location + r'\Audio\\' + music + r'.mp3')
+        calculator()
 
 def admin_panel():
     name = input("What is your name:").lower()
     if name == 'nuke':
         print("Okay, nuking")
-        playsound(r'C:\Users\jetfl\Coding\Calculator-main\Audio\nuke.mp3')
+        playsound(location + r'\Audio\nuke.mp3')
         quit()
     elif name == 'audrey':
         audrey()
@@ -37,29 +34,7 @@ def admin_panel():
         print("You wasted your time getting here it does nothing")
         calculator()
 
-def audrey():
-    audreyq = input("\nAre you audrey? DONT LIE (Yes or No): ").lower()
-    if audreyq == 'yes':
-        password = input("Enter your password: ")
-        if password == 'Crossfield25':
-            escape = input("click enter to play a song or type quit to exit: ").lower()
-            if escape == 'quit':
-                calculator()
-            else:
-                print("\nPlaying loverboy by A-Wall")
-                playsound(r'C:\Users\jetfl\Coding\Calculator-main\Audio\audrey.mp3')
-                calculator()
-        else:
-            print("\nIncorrect Password")
-            time.sleep(2)
-            calculator()
-    elif audreyq == 'no':
-        print("Well then why are you here???")
-        time.sleep(3)
-        calculator()
-    else:
-        print("You didn't say yes or no.")
-        calculator()
+# Exit -------
 
 def quit1():
     print("closing in 5 seconds")
@@ -75,6 +50,8 @@ def quit1():
     print("closing")
     time.sleep(1)
     quit()
+
+# Main -------
 
 def calculator():
     try:
@@ -149,5 +126,27 @@ def calculator():
         print("!!!")
         time.sleep(3)
         calculator()
+
+# Program start -------
+
+print("Version 4.3.5")
+print("To see latest version visit https://github.com/JackAttack612/Calculator")
+print("Loading Calculator...")
+time.sleep(2)
+print("\nOperations/Info:")
+print("+ = addition")
+print("- = subtracion")
+print("/ = division")
+print("* = multiply")
+print("** = exponent")
+print("// = floor division")
+print("% = modulus")
+print("< = less than")
+print("> = greater than")
+print("This calculator uses order of operation")
+print("To get the list of Operators later type \"Operations\" ")
+print("_______________________")
+
+location = os.path.dirname(__file__)
 
 calculator()
